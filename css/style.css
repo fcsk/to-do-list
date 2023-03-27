@@ -85,7 +85,7 @@ nav {
     font-size:20px ;
 }
 
-.task-text:focus {
+#task-text:focus {
     outline: none;
 }
 
