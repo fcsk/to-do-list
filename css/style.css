@@ -45,7 +45,7 @@ nav {
     color: rgb(88, 87, 87);
 }
 
-.task-form {
+.created-task{
     display: inline-grid;
     grid-template-columns: auto auto;
     padding-top: 30px;
@@ -67,12 +67,18 @@ nav {
    
 }
 
-.task-form label {
+.task-form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.created-task label {
     padding:12.5px;
     cursor: pointer;
 }
 
-.task-text {
+#task-text {
     width: 85%;
     border: gray;
     padding: 10px;
@@ -103,7 +109,7 @@ nav {
 }
 
 .Add-task{
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .addnew-task:hover {
@@ -124,4 +130,8 @@ nav {
 .add-task-button:hover {
     color: #8463b3;
     transition: 0.2s;
+}
+
+.task-area-display{
+    visibility:visible;
 }
