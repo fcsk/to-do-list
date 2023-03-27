@@ -40,18 +40,39 @@ nav {
 
 
 .task-area {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-    
+    color: rgb(88, 87, 87);
 }
 
-.task-area ul {
-    list-style-type: none;
+.task-form {
+    display: inline-grid;
+    grid-template-columns: auto auto;
 }
 
-.task-area li {
-    margin-top: 14px;
+.task-form input {
+    margin-right:10px;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    border: rgb(232, 230, 230);
 }
+
+.task-form input:checked {
+    margin-right:10px;
+    cursor: pointer;
+    accent-color: #A57AE3;
+    border:none;
+   
+}
+
+
+
+.task-form label {
+    padding:12.5px;
+    cursor: pointer;
+}
+
 
 .add-task {
     width: 200px;
