@@ -26,7 +26,7 @@ nav {
     display: grid;
     margin: 0 auto;
     margin-top: 50px;
-    text-align: center;
+    text-align:left;
     padding:50px;
     width: 600px;
     background-color: #F5F5F5;
@@ -48,9 +48,10 @@ nav {
 .task-form {
     display: inline-grid;
     grid-template-columns: auto auto;
+    padding-top: 30px;
 }
 
-.task-form input {
+.task-checkbox {
     margin-right:10px;
     cursor: pointer;
     position: relative;
@@ -58,7 +59,7 @@ nav {
     border: rgb(232, 230, 230);
 }
 
-.task-form input:checked {
+.task-checkbox:checked {
     margin-right:10px;
     cursor: pointer;
     accent-color: #A57AE3;
@@ -66,15 +67,23 @@ nav {
    
 }
 
-
-
 .task-form label {
     padding:12.5px;
     cursor: pointer;
 }
 
+.task-text {
+    width: 85%;
+    border: gray;
+    padding: 10px;
+    font-size:20px ;
+}
 
-.add-task {
+.task-text:focus {
+    outline: none;
+}
+
+.addnew-task {
     width: 200px;
     height: 50px;
     position: absolute;
@@ -85,8 +94,34 @@ nav {
     background-color:#A57AE3;
     color:aliceblue;
     text-align: center;
+    cursor: pointer;
     font-size: 20px;
     -webkit-box-shadow: 4px 3px 16px -5px rgba(66, 68, 90, 1);
     -moz-box-shadow: 4px 3px 16px -5px rgba(66, 68, 90, 1);
     box-shadow: 4px 3px 16px -5px rgba(66, 68, 90, 1);
+    transition: .2s;
+}
+
+.Add-task{
+    visibility:hidden;
+}
+
+.addnew-task:hover {
+    background-color:#8463b3;
+    transition: .3s;
+}
+
+.add-task-button {
+    color: #A57AE3;
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding:5px;
+    transition: 0.2s;
+}
+
+.add-task-button:hover {
+    color: #8463b3;
+    transition: 0.2s;
 }
