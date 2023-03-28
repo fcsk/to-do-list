@@ -46,17 +46,17 @@ nav {
 }
 
 .created-task{
-    display: inline-grid;
+    display: inline-flex;
     grid-template-columns: auto auto;
     padding-top: 30px;
 }
 
-.task-checkbox {
+.task-checkbox[type="checkbox"] {
     margin-right:10px;
     cursor: pointer;
     position: relative;
-    width: 30px;
-    border: rgb(232, 230, 230);
+    width: 40px;
+    
 }
 
 .task-checkbox:checked {
@@ -73,9 +73,19 @@ nav {
     
 }
 
-.created-task label {
+.created-input {
     padding:12.5px;
     cursor: pointer;
+    background-color: #F5F5F5;
+    color: rgb(88, 87, 87);
+    border: none;
+    font-size: 28px;
+    width: 80%;
+}
+
+.created-input:focus {
+    outline:none;
+    background-color: white;
 }
 
 #task-text {
@@ -139,14 +149,37 @@ nav {
 
 .delete-task-button:hover {
     color: #8463b3;
+    font-size: 36px;
+    transition: 0.2s;
+}
+
+.edit-task-button {
+    color: #A57AE3;
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding:5px;
+    transition: 0.2s;
+}
+
+.edit-task-button:hover {
+    color: #8463b3;
+    font-size: 32px;
     transition: 0.2s;
 }
 
 .add-task-button:hover {
     color: #8463b3;
     transition: 0.2s;
+    
 }
 
 .task-area-display{
     visibility:visible;
 }
+
+.icon-trash {
+    font-size: 30px
+}
+
