@@ -15,6 +15,12 @@ TaskSubmitButton?.addEventListener("click", () => {
     const newTask = document.createElement("div");
     const newCheckbox = document.createElement("input");
     const newLabel = document.createElement("label");
+    const deleteButton = document.createElement("button");
+    const deleteIcon = document.createElement("i");
+
+    deleteIcon.classList.add("icon-trash");
+    deleteButton.classList.add("delete-task-button");
+    deleteButton.appendChild(deleteIcon);
 
     newLabel.classList.add("task-checkbox");
     newLabel.innerHTML = `${TextOfTask}`;
@@ -28,6 +34,7 @@ TaskSubmitButton?.addEventListener("click", () => {
 
     newTask.appendChild(newCheckbox);
     newTask.appendChild(newLabel);
+    newTask.appendChild(deleteButton);
     PlaceForTasks.appendChild(newTask);
     document.getElementById("task-text").value = "";
 
@@ -38,6 +45,10 @@ TaskSubmitButton?.addEventListener("click", () => {
       } else {
         label.style.textDecoration = "none";
       }
+    });
+
+    deleteButton.addEventListener("click", () => {
+      newTask.remove();
     });
   }
 });

@@ -127,6 +127,21 @@ nav {
     transition: 0.2s;
 }
 
+.delete-task-button {
+    color: #A57AE3;
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding:5px;
+    transition: 0.2s;
+}
+
+.delete-task-button:hover {
+    color: #8463b3;
+    transition: 0.2s;
+}
+
 .add-task-button:hover {
     color: #8463b3;
     transition: 0.2s;
