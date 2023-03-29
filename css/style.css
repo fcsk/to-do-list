@@ -7,6 +7,8 @@
 body {
     background-color: #DAE0F5;
     font-family: 'Lato', sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 nav {
@@ -23,15 +25,19 @@ nav {
 }
 
 .containter {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 50px;
     text-align:left;
-    padding:50px;
-    width: 600px;
+    padding-left:40px;
+    padding-right: 5px;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    position: relative;
     background-color: #F5F5F5;
-    width: 600px;
-    height: 600px;
+    width: 60vw;
+    height: auto;
     border-radius: 5px;
     -webkit-box-shadow: 4px 3px 7px -5px rgba(66, 68, 90, 1);
     -moz-box-shadow: 4px 3px 7px -5px rgba(66, 68, 90, 1);
@@ -39,9 +45,11 @@ nav {
 }
 
 
+
 .task-area {
     font-size: 24px;
     font-weight: bold;
+    width: 80%;
     color: rgb(88, 87, 87);
 }
 
@@ -49,6 +57,7 @@ nav {
     display: inline-flex;
     grid-template-columns: auto auto;
     padding-top: 30px;
+    height: auto;
 }
 
 .task-checkbox[type="checkbox"] {
@@ -79,8 +88,10 @@ nav {
     background-color: #F5F5F5;
     color: rgb(88, 87, 87);
     border: none;
-    font-size: 28px;
+    font-size: 22px;
     width: 80%;
+    overflow: visible;
+    height: auto;
 }
 
 .created-input:focus {
@@ -89,7 +100,7 @@ nav {
 }
 
 #task-text {
-    width: 85%;
+    width: 80%;
     border: gray;
     padding: 10px;
     font-size:20px ;
@@ -103,8 +114,10 @@ nav {
     width: 200px;
     height: 50px;
     position: absolute;
-    margin-top: 625px;
-    margin-left: 200px;
+    left:50%;
+    bottom: 0;
+    margin-bottom: -25px;
+    transform: translateX(-50%);
     border-radius: 20px;
     border: none;
     background-color:#A57AE3;
@@ -183,3 +196,44 @@ nav {
     font-size: 30px
 }
 
+@media only screen and (max-width: 1600px) {
+    
+    .containter {
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 790px) {
+    
+    .containter {
+        width: 90vw;
+    }
+
+    .created-input {
+        font-size: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 560px) {
+    
+    .containter {
+        width: 95vw;
+        padding-left: 10px;
+        
+    }
+
+    #task-text{
+        width: 70%;
+    }
+    .created-input {
+        font-size: 16px;
+    }
+
+
+}
