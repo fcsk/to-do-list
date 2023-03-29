@@ -15,7 +15,7 @@ TaskSubmitButton?.addEventListener("click", () => {
   } else {
     const newTask = document.createElement("div");
     const newCheckbox = document.createElement("input");
-    const newInput = document.createElement("input");
+    const newInput = document.createElement("textarea");
     const deleteButton = document.createElement("button");
     const deleteIcon = document.createElement("i");
     const editIcon = document.createElement("i");
@@ -32,6 +32,11 @@ TaskSubmitButton?.addEventListener("click", () => {
     newInput.classList.add("created-input");
     newInput.value = TextOfTask;
     newInput.setAttribute("disabled", "disabled");
+    newInput.style.resize = "none";
+    newInput.addEventListener("input", (event) => {
+      event.target.style.height = "auto";
+      event.target.style.height = event.target.scrollHeight + "px";
+    });
 
     newCheckbox.type = "checkbox";
     newCheckbox.classList.add("task-checkbox");
@@ -69,6 +74,7 @@ TaskSubmitButton?.addEventListener("click", () => {
 
     EditButton.addEventListener("click", () => {
       newInput.removeAttribute("disabled");
+      newInput.style.resize = "vertical";
       newInput.focus();
     });
   }
@@ -81,7 +87,7 @@ taskText?.addEventListener("keypress", (event) => {
     } else {
       const newTask = document.createElement("div");
       const newCheckbox = document.createElement("input");
-      const newInput = document.createElement("input");
+      const newInput = document.createElement("textarea");
       const deleteButton = document.createElement("button");
       const deleteIcon = document.createElement("i");
       const editIcon = document.createElement("i");
@@ -98,6 +104,11 @@ taskText?.addEventListener("keypress", (event) => {
       newInput.classList.add("created-input");
       newInput.value = TextOfTask;
       newInput.setAttribute("disabled", "disabled");
+      newInput.style.resize = "none";
+      newInput.addEventListener("input", (event) => {
+        event.target.style.height = "auto";
+        event.target.style.height = event.target.scrollHeight + "px";
+      });
 
       newCheckbox.type = "checkbox";
       newCheckbox.classList.add("task-checkbox");
@@ -135,6 +146,7 @@ taskText?.addEventListener("keypress", (event) => {
 
       EditButton.addEventListener("click", () => {
         newInput.removeAttribute("disabled");
+        newInput.style.resize = "vertical";
         newInput.focus();
       });
     }

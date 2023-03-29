@@ -57,6 +57,7 @@ nav {
     display: inline-flex;
     grid-template-columns: auto auto;
     padding-top: 30px;
+    width: 100%;
     height: auto;
 }
 
@@ -89,8 +90,7 @@ nav {
     color: rgb(88, 87, 87);
     border: none;
     font-size: 22px;
-    width: 80%;
-    overflow: visible;
+    overflow: hidden;
     height: auto;
 }
 
@@ -217,6 +217,11 @@ nav {
         font-size: 20px;
     }
 
+    .delete-task-button {
+        font-size: 20px;
+    }
+
+
 
 }
 
@@ -232,8 +237,10 @@ nav {
         width: 70%;
     }
     .created-input {
-        font-size: 16px;
+        font-size: 12px;
+    
     }
+
 
 
 }
