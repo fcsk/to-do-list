@@ -92,7 +92,12 @@ nav {
     font-size: 22px;
     overflow: hidden;
     height: auto;
+    width: 100%;
+    height: auto;
+    word-wrap: break-word;
 }
+
+
 
 .created-input:focus {
     outline:none;

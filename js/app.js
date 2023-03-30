@@ -33,10 +33,8 @@ TaskSubmitButton?.addEventListener("click", () => {
     newInput.value = TextOfTask;
     newInput.setAttribute("disabled", "disabled");
     newInput.style.resize = "none";
-    newInput.addEventListener("input", (event) => {
-      event.target.style.height = "auto";
-      event.target.style.height = event.target.scrollHeight + "px";
-    });
+
+    newInput;
 
     newCheckbox.type = "checkbox";
     newCheckbox.classList.add("task-checkbox");
@@ -76,6 +74,13 @@ TaskSubmitButton?.addEventListener("click", () => {
       newInput.removeAttribute("disabled");
       newInput.style.resize = "vertical";
       newInput.focus();
+    });
+
+    newInput.addEventListener("blur", () => {
+      if (newInput === document.activeElement) {
+      } else {
+        newInput.style.resize = "none";
+      }
     });
   }
 });
