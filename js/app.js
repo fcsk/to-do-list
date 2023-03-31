@@ -72,6 +72,18 @@ TaskSubmitButton?.addEventListener("click", () => {
       newTask.remove();
     });
 
+    deleteButton.addEventListener("click", () => {
+      const taskToDelete = newInput.value;
+      let tasks = [];
+      if (localStorage.getItem(localStorageKey)) {
+        tasks = JSON.parse(localStorage.getItem(localStorageKey));
+      }
+      const filteredTasks = tasks.filter((task) => task !== taskToDelete);
+      localStorage.setItem(localStorageKey, JSON.stringify(filteredTasks));
+
+      newTask.remove();
+    });
+
     newInput.addEventListener("keypress", (event) => {
       if (event.keyCode === 13) {
         newInput.setAttribute("disabled", "disabled");
